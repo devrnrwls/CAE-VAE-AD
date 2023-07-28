@@ -21,7 +21,7 @@ kiwisolver==1.4.4
 libclang==14.0.6
 Markdown==3.4.1
 MarkupSafe==2.1.1
-matplotlib==3.6.0
+matplotlib==3.4.0
 numpy==1.23.3
 oauthlib==3.2.1
 opencv-python==4.6.0.66
@@ -51,3 +51,4 @@ typing_extensions==4.3.0
 urllib3==1.26.12
 Werkzeug==2.2.2
 wrapt==1.14.1
+pyopencl==2023.1.1
