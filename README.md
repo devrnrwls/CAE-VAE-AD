@@ -66,8 +66,10 @@ Model is going to be saved in the *.pb* file format in the folder *data*.
 
 ### 3. Evaluate CAE
 Evaluate the trained models using the saved *.pb* data by running the script
+
+#choice action: 'train' 'test'
 ```
-python AE_Evaluate.py
+python AE_Evaluate.py --action 'train'
 ```
 to obtain encoded and decoded images of all three defined models in the corresponding *data* subfolders.
 
