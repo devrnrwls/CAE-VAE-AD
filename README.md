@@ -5,6 +5,8 @@
 This repository implements the data preprocessing methods for the anomaly detection described in the paper [Feature space reduction as data preprocessing for the anomaly detection](https://arxiv.org/abs/2203.06747) and it is partialy based on the [Unsupervised Anomaly detection with One/Class Support Vector Machine](https://github.com/hiram64/ocsvm-anomaly-detection) repository.
 
 #### Dependencies
+#파이썬 3.8버전 이상 필요
+
 Install the TensorFlow 2 via pip: https://www.tensorflow.org/install
 
 Install the remaining requirements using:
