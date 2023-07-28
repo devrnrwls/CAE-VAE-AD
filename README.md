@@ -21,6 +21,7 @@ Prepare data and labels to use. For instance, CIFAR10 is composed of 10 classes 
 You can download CIFAR10 data via :  
 https://www.kaggle.com/janzenliu/cifar-10-batches-py
 
+# AnotaceFinal.csv 파일은 Data Explorer에서 version1에서 다운 가능
 Industrial cookie dataset (more suitable for the anomaly detection) is available at:
 https://www.kaggle.com/datasets/imonbilk/industry-biscuit-cookie-dataset
 
