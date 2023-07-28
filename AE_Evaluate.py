@@ -21,10 +21,10 @@ from tensorflow.keras.models import Model, load_model
 def parse_args():
     parser = argparse.ArgumentParser(description='Evaluate the trained CAE')
 
-    parser.add_argument('--data_path', default='../IndustryBiscuit_KerasApp/', type=str, help='path to dataset')
+    parser.add_argument('--data_path', default='./data/IndustryBiscuit_KerasApp/', type=str, help='path to dataset')
     parser.add_argument('--docs_path', default='./docs/', type=str, help='path to docs')
     parser.add_argument('--labels_path', default='./data/cookie_labels.npz', type=str, help='path to labels')
-    parser.add_argument('--action', default='Train', type=int, help='Process training, or testing data. Set as Train, or Test')
+    parser.add_argument('--action', default='Test', type=str, help='Process training, or testing data. Set as Train, or Test')
     parser.add_argument('--height', default=256, type=int, help='height of images')
     parser.add_argument('--width', default=256, type=int, help='width of images')
     parser.add_argument('--batch_size', default=5  , type=int, help='mini batch size')

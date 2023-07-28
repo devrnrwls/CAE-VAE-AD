@@ -21,7 +21,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Evaluate the trained CAE')
 
     parser.add_argument('--docs_path', default='./docs/', type=str, help='path to docs')
-    parser.add_argument('--action', default='Train', type=int, help='Process training, or testing data. Set as Train, or Test')
+    parser.add_argument('--action', default='Train', type=str, help='Process training, or testing data. Set as Train, or Test')
 
     args = parser.parse_args()
 

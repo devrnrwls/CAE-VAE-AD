@@ -19,7 +19,7 @@ from PIL import Image
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Create custom NPZ data for the model evaluation')
-    parser.add_argument('--data_path', default='../IndustryBiscuit_KerasApp/', type=str, help='path to dataset')
+    parser.add_argument('--data_path', default='./data/IndustryBiscuit_KerasApp/', type=str, help='path to dataset')
 
     args = parser.parse_args()
 

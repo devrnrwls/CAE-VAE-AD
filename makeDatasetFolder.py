@@ -34,9 +34,9 @@ rSObject = 0.3
 rCDefect = 0.3
 
 # Specify the image, annotations and destination path
-imPath = "D:\\Programovani\\Datasets\\IndustryBiscuit\\Images"
-anPath = "D:\\Programovani\\Datasets\\IndustryBiscuit\\AnotaceFinal.csv"
-dsPath = "D:\\Programovani\\Datasets\\IndustryBiscuit_KerasApp"
+imPath = "./data/IndustryBiscuit_Keras/Images"
+anPath = "./data/IndustryBiscuit_Keras/AnotaceFinal.csv"
+dsPath = "./data/IndustryBiscuit_KerasApp"
 
 # Counters initialization
 cTrain_ok = 0
@@ -73,15 +73,15 @@ if not os.path.exists(dsPath):
     
     # Create the folder structure
     os.mkdir(dsPath)
-    os.mkdir(dsPath + '\\train')
-    os.mkdir(dsPath + '\\train' + '\\ok')
-    os.mkdir(dsPath + '\\train' + '\\nok')
-    os.mkdir(dsPath + '\\valid')
-    os.mkdir(dsPath + '\\valid' + '\\ok')
-    os.mkdir(dsPath + '\\valid' + '\\nok')
-    os.mkdir(dsPath + '\\test')
-    os.mkdir(dsPath + '\\test' + '\\ok')
-    os.mkdir(dsPath + '\\test' + '\\nok')
+    os.mkdir(dsPath + '/train')
+    os.mkdir(dsPath + '/train' + '/ok')
+    os.mkdir(dsPath + '/train' + '/nok')
+    os.mkdir(dsPath + '/valid')
+    os.mkdir(dsPath + '/valid' + '/ok')
+    os.mkdir(dsPath + '/valid' + '/nok')
+    os.mkdir(dsPath + '/test')
+    os.mkdir(dsPath + '/test' + '/ok')
+    os.mkdir(dsPath + '/test' + '/nok')
 
     # Load the filenames and the annotation from the .csv file
     data = pd.read_csv(anPath, usecols= ['file','licenceCode', 'upperLeftX', 'upperLeftY', 'lowerRightX', 'lowerRightY'])
@@ -114,46 +114,46 @@ if not os.path.exists(dsPath):
             # Split the images to the categories
             if value[5] == "Bez_Vady":
                 if (cTrain_ok < nTrain_ok):
-                    im.save(os.path.join(dsPath + '\\train' + '\\ok', value[0]), format='jpeg')
+                    im.save(os.path.join(dsPath + '/train' + '/ok', value[0]), format='jpeg')
                     cTrain_ok += 1
                 elif (cValid_ok < nValid_ok):
-                    im.save(os.path.join(dsPath + '\\valid' + '\\ok', value[0]), format='jpeg')
+                    im.save(os.path.join(dsPath + '/valid' + '/ok', value[0]), format='jpeg')
                     cValid_ok += 1
                 elif (cTest_ok < nTest_ok):
-                    im.save(os.path.join(dsPath + '\\test' + '\\ok', value[0]), format='jpeg')
+                    im.save(os.path.join(dsPath + '/test' + '/ok', value[0]), format='jpeg')
                     cTest_ok += 1
                     
             elif value[5] == "Vada_Neuplnost":
                 if (cTrainNC_nok < nTrNC):
-                    im.save(os.path.join(dsPath + '\\train' + '\\nok', value[0]), format='jpeg')
+                    im.save(os.path.join(dsPath + '/train' + '/nok', value[0]), format='jpeg')
                     cTrainNC_nok += 1
                 elif (cValidNC_nok < nVaNC):
-                    im.save(os.path.join(dsPath + '\\valid' + '\\nok', value[0]), format='jpeg')
+                    im.save(os.path.join(dsPath + '/valid' + '/nok', value[0]), format='jpeg')
                     cValidNC_nok += 1
                 elif (cTestNC_nok < nTeNC):
-                    im.save(os.path.join(dsPath + '\\test' + '\\nok', value[0]), format='jpeg')
+                    im.save(os.path.join(dsPath + '/test' + '/nok', value[0]), format='jpeg')
                     cTestNC_nok += 1
                     
             elif value[5] == "Vada_CiziObjekt":
                 if (cTrainSO_nok < nTrSO):
-                    im.save(os.path.join(dsPath + '\\train' + '\\nok', value[0]), format='jpeg')
+                    im.save(os.path.join(dsPath + '/train' + '/nok', value[0]), format='jpeg')
                     cTrainSO_nok += 1
                 elif (cValidSO_nok < nVaSO):
-                    im.save(os.path.join(dsPath + '\\valid' + '\\nok', value[0]), format='jpeg')
+                    im.save(os.path.join(dsPath + '/valid' + '/nok', value[0]), format='jpeg')
                     cValidSO_nok += 1
                 elif (cTestSO_nok < nTeSO):
-                    im.save(os.path.join(dsPath + '\\test' + '\\nok', value[0]), format='jpeg')
+                    im.save(os.path.join(dsPath + '/test' + '/nok', value[0]), format='jpeg')
                     cTestSO_nok += 1
                     
             elif value[5] == "Vada_NestandardniBarva":
                 if (cTrainCD_nok < nTrCD):
-                    im.save(os.path.join(dsPath + '\\train' + '\\nok', value[0]), format='jpeg')
+                    im.save(os.path.join(dsPath + '/train' + '/nok', value[0]), format='jpeg')
                     cTrainCD_nok += 1
                 elif (cValidCD_nok < nVaCD):
-                    im.save(os.path.join(dsPath + '\\valid' + '\\nok', value[0]), format='jpeg')
+                    im.save(os.path.join(dsPath + '/valid' + '/nok', value[0]), format='jpeg')
                     cValidCD_nok += 1
                 elif (cTestCD_nok < nTeCD):
-                    im.save(os.path.join(dsPath + '\\test' + '\\nok', value[0]), format='jpeg')
+                    im.save(os.path.join(dsPath + '/test' + '/nok', value[0]), format='jpeg')
                     cTestCD_nok += 1
                 
     # Print dataset statistics TODO

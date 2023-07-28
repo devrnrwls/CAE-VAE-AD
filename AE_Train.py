@@ -22,8 +22,8 @@ from models import build_bae1_model, build_bae2_model, build_mvt_model
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train convolutional AE and save the model')
-    parser.add_argument('--data_path', default='../IndustryBiscuit_KerasApp/', type=str, help='path to dataset')
-    parser.add_argument('--model', default='bae1'  , type=int, help='prepared model')
+    parser.add_argument('--data_path', default='./data/IndustryBiscuit_KerasApp/', type=str, help='path to dataset')
+    parser.add_argument('--model', default='mvt'  , type=str, help='prepared model')
     parser.add_argument('--height', default=256, type=int, help='height of images')
     parser.add_argument('--width', default=256, type=int, help='width of images')
     parser.add_argument('--channel', default=3, type=int, help='channel of images')
@@ -110,7 +110,7 @@ def main():
     
     # Configure the early stopping callback
     esCallBack = callbacks.EarlyStopping(
-        monitor = 'loss', 
+        monitor = 'loss',
         patience = 3)
     
     # Show a summary of the model. Check the number of trainable parameters
