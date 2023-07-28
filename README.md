@@ -12,6 +12,7 @@ Install the TensorFlow 2 via pip: https://www.tensorflow.org/install
 Install the remaining requirements using:
 ```
 pip install -r requirements.txt
+pip install tensorflow==2.3.0
 ```
 
 ## How to use
