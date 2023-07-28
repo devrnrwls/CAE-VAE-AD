@@ -36,7 +36,7 @@ rCDefect = 0.3
 # Specify the image, annotations and destination path
 imPath = "./data/IndustryBiscuit_Keras/Images"
 anPath = "./data/IndustryBiscuit_Keras/AnotaceFinal.csv"
-dsPath = "./data/IndustryBiscuit_KerasApp"
+dsPath = "./data/IndustryBiscuit_KerasApp2"
 
 # Counters initialization
 cTrain_ok = 0
@@ -84,6 +84,8 @@ if not os.path.exists(dsPath):
     os.mkdir(dsPath + '/test' + '/nok')
 
     # Load the filenames and the annotation from the .csv file
+    # usecols에서 정의한 순서는 data 배열의 순서가 아님. 단지 해당 속성을 사용한다는 정도의 의미.
+    # 실제 data의 배열 순서는 엑셀 파일의 순서를 따름. 그래서 'licenceCode'속성은 value[5]와 동일
     data = pd.read_csv(anPath, usecols= ['file','licenceCode', 'upperLeftX', 'upperLeftY', 'lowerRightX', 'lowerRightY'])
     
     augm = 1226
