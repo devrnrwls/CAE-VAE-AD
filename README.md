@@ -6,6 +6,7 @@ This repository implements the data preprocessing methods for the anomaly detect
 
 #### Dependencies
 #파이썬 3.8버전 이상 필요
+
 Install the TensorFlow 2 via pip: https://www.tensorflow.org/install
 
 Install the remaining requirements using:
