@@ -52,6 +52,7 @@ You might need to change network architecture's parameter so that it can deal wi
 
 ### 2. Train CAE
 Three CAE models (BAE1, BAE2 and MVTec) are defined in the module *models.py*. Train and save the desired model by running the script
+#choice models: 'bae1' 'bae2' 'mvt'
 ```
 python AE_Train.py --model 'bae1'
 ```
