@@ -28,11 +28,13 @@ Industrial cookie dataset (more suitable for the anomaly detection) is available
 https://www.kaggle.com/datasets/imonbilk/industry-biscuit-cookie-dataset
 
 Put them in "data" directory and run the following code to compress them into NPZ file.
+
+#쿠키 데이터셋은 makeCustomNpz.py 사용
 ```
 python makeCifar10Npz.py
 
 or
-#쿠키 데이터셋은 아래 파이썬 코드 사용
+
 python makeCustomNpz.py
 ```
 After running this code, you can get *npz* data under "data" directory.
