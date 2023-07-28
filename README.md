@@ -53,7 +53,7 @@ You might need to change network architecture's parameter so that it can deal wi
 ### 2. Train CAE
 Three CAE models (BAE1, BAE2 and MVTec) are defined in the module *models.py*. Train and save the desired model by running the script
 ```
-python AE_train.py
+python AE_Train.py --model 'bae1'
 ```
 Model is going to be saved in the *.pb* file format in the folder *data*.
 
@@ -61,7 +61,7 @@ Model is going to be saved in the *.pb* file format in the folder *data*.
 ### 3. Evaluate CAE
 Evaluate the trained models using the saved *.pb* data by running the script
 ```
-python AE_evaluate.py
+python AE_Evaluate.py
 ```
 to obtain encoded and decoded images of all three defined models in the corresponding *data* subfolders.
 
